@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+/* =========================
+   THEME VARIABLES (DARK DEFAULT)
+========================= */
+@theme {
+  --color-background: #0f1418;
+  --color-foreground: #f0f2f5;
+
+  --color-card: #141a1f;
+
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+
+  --color-secondary: #1f2830;
+  --color-secondary-foreground: #20b2a6;
+
+  --color-muted: #252e37;
+  --color-muted-foreground: #7a8491;
+
+  --color-border: #242b32;
+
+  --color-surface: #1a2329;
+
+  --radius: 0.75rem;
+
+  --color-highlight: #f5a623;
+}
+
+/* =========================
+   LIGHT THEME OVERRIDE
+========================= */
+.light {
+  /* Main background (soft warm white, not pure white) */
+  --color-background: #f7f8fc;
+
+  /* Text (soft dark, not harsh black) */
+  --color-foreground: #1a1f2b;
+
+  /* Cards (slightly elevated surface) */
+  --color-card: #ffffff;
+
+  /* Primary (keep same blue but slightly softer feel) */
+  --color-primary: #3b82f6;
+  --color-primary-foreground: #ffffff;
+
+  /* Secondary surfaces */
+  --color-secondary: #eef2ff;
+  --color-secondary-foreground: #1a1f2b;
+
+  /* Muted backgrounds */
+  --color-muted: #f1f5f9;
+  --color-muted-foreground: #64748b;
+
+  /* Borders (important for cards visibility) */
+  --color-border: #e2e8f0;
+
+  /* Soft background surfaces */
+  --color-surface: #f8fafc;
+
+  /* Accent highlight */
+  --color-highlight: #f59e0b;
+}
+/* =========================
+   BASE STYLES
+========================= */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: "Inter", sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", serif;
+  }
+}
+
+/* =========================
+   COMPONENTS
+========================= */
+@layer components {
+  .glass {
+    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
+    backdrop-filter: blur(16px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
+  }
+
+  .glass-strong {
+    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
+    backdrop-filter: blur(24px);
+    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
+  }
+}
+
+/* =========================
+   UTILITIES
+========================= */
+@layer utilities {
+  .bg-background {
+    background-color: var(--color-background);
+  }
+
+  .text-foreground {
+    color: var(--color-foreground);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .border-border {
+    border-color: var(--color-border);
+  }
+
+  .bg-card {
+    background-color: var(--color-card);
+  }
+
+  .text-muted-foreground {
+    color: var(--color-muted-foreground);
+  }
+
+  /* =========================
+     ANIMATIONS
+  ========================= */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+      filter: blur(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+      filter: blur(0);
+    }
+  }
+
+  @keyframes slow-drift {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(20px, -30px);
+    }
+    50% {
+      transform: translate(-15px, -20px);
+    }
+    75% {
+      transform: translate(30px, 10px);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out both;
+  }
+}
