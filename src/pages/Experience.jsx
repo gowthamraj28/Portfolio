@@ -3,11 +3,9 @@ import React from "react";
 const workData = [
   {
     company: "Tata Consultancy Services",
-    role: "Assistant System Engineer",
+    role: "Assistant System Engineer Trainee",
     year: "June, 2026 - Present",
     location: "Bangalore, India",
-    responsibility:
-      "Worked on developing and maintaining web applications, building RESTful APIs, and collaborating with teams to deliver scalable solutions.",
   },
 ];
 
