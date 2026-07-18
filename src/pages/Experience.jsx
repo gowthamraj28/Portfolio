@@ -4,18 +4,10 @@ const workData = [
   {
     company: "Tata Consultancy Services",
     role: "Assistant System Engineer",
-    year: "2025 - Present",
+    year: "June, 2026 - Present",
     location: "Bangalore, India",
     responsibility:
       "Worked on developing and maintaining web applications, building RESTful APIs, and collaborating with teams to deliver scalable solutions.",
-  },
-  {
-    company: "JSpiders Training",
-    role: "Java Full Stack Trainee",
-    year: "2024 - 2025",
-    location: "Bangalore, India",
-    responsibility:
-      "Gained hands-on experience in Java, Spring Boot, React, and SQL by building full-stack applications and improving problem-solving skills.",
   },
 ];
 
