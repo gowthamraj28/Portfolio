@@ -18,19 +18,19 @@ const Hero = () => {
           </h1>
 
           <p className="text-base sm:text-lg text-muted-foreground leading-relaxed">
-            I am an aspiring Java Full Stack Developer with a strong interest in
-            technology and a continuous drive to learn and improve. I enjoy
-            building web applications and exploring how systems work end-to-end,
-            with a focus on writing clean, efficient, and maintainable code. I’m
-            passionate about solving real-world problems and constantly
-            expanding my knowledge in modern development practices
+            I'm a Software Engineer with a strong foundation in Java, Spring
+            Boot, SQL, React, and modern web technologies. I enjoy building web
+            applications, developing RESTful APIs, and solving real-world
+            problems through clean and efficient code. I'm passionate about
+            learning new technologies and continuously improving my skills in
+            software development.
           </p>
 
           {/* Optional Button */}
           <div className="pt-2 flex gap-4">
             <Button size="default">
               <a
-                href="https://drive.google.com/file/d/1DxPwxiDCFH8KZck-rfBFmgi5xd306UMX/view?usp=drive_link"
+                href="https://drive.google.com/file/d/1Hn2oUC_ycgVAO6rRa-wWay-EWmjmo9X-/view?usp=drive_link"
                 target="_blank"
                 rel="noopener noreferrer"
               >
